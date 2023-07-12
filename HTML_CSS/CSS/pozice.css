@@ -6,7 +6,7 @@
 }
 body{
     font-size: 1.5rem; 
-    min-height: 200vh;;
+    min-height: 200vh;
 }
 
 .outer-container{
@@ -14,6 +14,8 @@ body{
     height: 75vw;
     width: 85vw;
     margin: 40px auto;
+    position: relative;
+    
 }
 .inner-container{
     border: solid blue 2px;
@@ -28,3 +30,22 @@ body{
     color:white;
     padding: 1rem;
 }
+.absolute{
+    background-color:green;
+    position:absolute;
+    top:0;
+    left:0;    
+}
+.fixed{
+    background-color:brown;
+    position: fixed;
+    top: 100px;
+     
+}
+.relative{
+    background-color: yellow;
+    position: relative;
+    top: 300px;
+    left: 100px;
+}
+
