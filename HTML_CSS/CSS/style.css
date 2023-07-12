@@ -25,8 +25,15 @@ select{
     text-shadow: 5px 5px 10px black ;
     
 }
-
-
+.zalomeni{
+    line-height: 1.7;
+    text-decoration: overline blue;
+    
+    
+}
+.zalomeni:hover{
+    text-decoration: underline blue;
+}
 #lists{
     background-color:var(--bg_1);
 }
