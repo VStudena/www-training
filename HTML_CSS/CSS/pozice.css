@@ -1,0 +1,30 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;  
+    
+}
+body{
+    font-size: 1.5rem; 
+    min-height: 200vh;;
+}
+
+.outer-container{
+    border: dashed black 3px;
+    height: 75vw;
+    width: 85vw;
+    margin: 40px auto;
+}
+.inner-container{
+    border: solid blue 2px;
+    width: 50vw;
+    height: 40vw;
+    margin:200px auto;
+}
+.box{
+    background-color:purple;
+    height: 150px;
+    width: 150px;
+    color:white;
+    padding: 1rem;
+}

@@ -1,0 +1,100 @@
+:root{
+    --hlavni_barva:hsla(0,59%,41%,0.3);
+    --barva_1:hsla(0,59%,41%,0.6);
+    --barva_2:hsla(0,59%,41%);
+    --barva_light:white;
+    --hlavni_bg_barva:hsla(120,50%,80%);
+    --bg_1:hsla(180,50%,80%);
+    --bg_2:hsla(60,50%,80%);    
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;    
+}
+input,
+textarea,
+button,
+select{
+    font: inherit;
+}
+#typography{
+    background-color:var(--hlavni_bg_barva);
+}
+#typography>h2{
+    text-shadow: 5px 5px 10px black ;
+    
+}
+
+
+#lists{
+    background-color:var(--bg_1);
+}
+#forms{
+    background-color:var(--bg_2);
+}
+#table{
+    background-image: url(https://source.unsplash.com/b0EzyHcXmsI);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-attachment: fixed;
+}
+main{
+    margin: auto;
+    width: 90%;
+    }
+ h1,h2,h3,h4,h5,h6{
+    margin: 1.5rem
+ }   
+p{
+    margin: 1rem;
+    padding: 0 2rem;
+    
+}
+.pod{
+    color: red;
+    text-transform: uppercase;
+    text-indent: 30px;
+}
+
+
+ul,ol,dl{
+    margin: 1rem;
+    padding: 0 2rem;
+}
+ol{
+    list-style: lower-greek;
+    background-color: bisque;
+    border-width: 2px;
+    border-style:solid;
+    border-color: rgb(25, 0, 255);
+}
+ul li{
+    background-color: #EEEEEE;
+    border-style: solid;
+    border-color:#DDDDDD ;
+    padding: 5px 10px;
+    list-style-position: inside;
+    list-style-type: circle;
+}
+dl{
+    border-left: 7px double red;
+    
+}
+dt{
+    color: red;
+    float: left;
+    font-weight: bold;
+    text-align: right;
+
+}
+dt::after{
+    content: ":";
+    
+}
+dd{
+    margin: 0 0 0 120px;
+    padding: 0 0 0.5em 0;
+}
+
