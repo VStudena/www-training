@@ -85,6 +85,7 @@ const Home = () => {
         }
     })
     setShelterStorage(newStorageValue);
+    setTempStorage({food:"",vaccine:"",pills:""});
 }
 
   return (
