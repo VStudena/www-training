@@ -48,3 +48,35 @@ export const Button=styled.button`
     width: 130px;
     height: 25px;
 `;
+
+export const Buttons =styled(DogForm)`
+    margin: 30px 0;
+    height: 40px;
+`;
+
+export const TabButton=styled.button`
+    display:flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 48%;
+    border: 1px solid white;
+    color:white;
+    font-size:20px;
+    cursor: pointer;
+    background:transparent;
+    ${
+        (props)=> {
+            if (props.name===props["data-active"]) {
+                return `
+                    background-color:rgba(255,255,255,0.3);
+                `;
+            }
+        }
+    }
+`;
+
+export const ShelterForm =styled(DogForm)`
+    flex-direction: column;    
+`;
