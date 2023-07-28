@@ -34,6 +34,11 @@ const Home = () => {
         validateData(updateDog);
     }
 
+    const dogsRequirements = {
+        food: 5,
+        vaccine: 1,
+        pills: 2
+    };
     //useEffect(()=>{console.log(newDog)},[newDog]);
 
     const validateData=(dog)=>{
@@ -48,20 +53,35 @@ const Home = () => {
         setValid(true);
     };
     const handleAdd=()=>{
-        setListOfDogs((listOfDogs)=>{
-            return[...listOfDogs,newDog];
-        });
-      //  const newId=newDog.id+1;
-        dogsCount.current++;
-        const updateDog={
-          //  id:newId,
-            id:dogsCount.current+1,
-            name:"",
-            race:"",
-            age:"",
+        let pushDog=false;
+        const totalRequirements={
+            food:(dogsRequirements.food*(listOfDogs.length+1)),
+            vaccine:(dogsRequirements.vaccine*(listOfDogs.length+1)),
+            pills:(dogsRequirements.pills*(listOfDogs.length+1)),
         }
-        setNewDog(updateDog);
-        setValid(false);
+        if (totalRequirements.food<= shelterStorage.food && totalRequirements.vaccine<= shelterStorage.vaccine &&totalRequirements.pills<= shelterStorage.pills) {
+            pushDog=true;
+        }
+        if (pushDog) {
+            setListOfDogs((listOfDogs)=>{
+                return[...listOfDogs,newDog];
+            });
+          //  const newId=newDog.id+1;
+            dogsCount.current++;
+            const updateDog={
+              //  id:newId,
+                id:dogsCount.current+1,
+                name:"",
+                race:"",
+                age:"",
+            }
+            setNewDog(updateDog);
+            setValid(false);
+        }
+        else{
+            alert("Nedostatek zasob pro pridani psa.")
+        }
+       
     }
 
     const handleDelete=(idToDel)=>{
